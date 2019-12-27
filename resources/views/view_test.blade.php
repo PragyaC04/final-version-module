@@ -30,19 +30,19 @@
    }
 
    #sect1{
-       height: 600px;
+       height: 580px;
        overflow-y: auto;
    }
    #sect2{
-       height: 600px;
+       height: 580px;
        overflow-y: auto;
    }
    #sect3{
-       height: 600px;
+       height: 580px;
        overflow-y: auto;
    }
    #sect4{
-       height: 600px;
+       height: 580px;
        overflow-y: auto;
    }
    .card-footer form{

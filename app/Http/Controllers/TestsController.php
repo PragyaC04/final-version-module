@@ -856,4 +856,20 @@ public function comp_edit(){
         return view('succ_delete')->with('a',$a)->with('b',$b)->with('sect',$sect);
     }
 
+    public function delete()
+    {
+        $a=$_GET['test_id'];
+        $b=$_GET['test_n'];
+
+        Test::where('setid',$a)->where('setname',$b)->delete();
+        Qualitative::where('setid',$a)->delete();
+        Analytical::where('setid',$a)->delete();
+        Creative::where('setid',$a)->delete();
+        Comprehension::where('setid',$a)->delete();
+    
+        $t = DB::select('select * from tests');
+        return view('test_display',['t'=>$t]);
+        
+    }
+
 }

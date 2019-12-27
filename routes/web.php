@@ -45,3 +45,5 @@ Route::get('/qual_delete','TestsController@qual_delete');
 Route::get('/analy_delete','TestsController@analy_delete');
 Route::get('/creat_delete','TestsController@creat_delete');
 Route::get('/comp_delete','TestsController@comp_delete');
+
+Route::get('/test_delete','TestsController@delete');

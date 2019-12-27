@@ -79,18 +79,29 @@
             <tr>
             <th scope="col">Test Name</th>
             <th scope="col">View</th>
+            <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>
         @foreach($t as $t)
+            
+            
+            <tr>
+            <td>{{$t->setname}}</td>
+            <td>
             <form action="{{action('TestsController@display')}}" method="GET">
             <input type="hidden" value="{{$t->setid}}" name="test_id">
             <input type="hidden" value="{{$t->setname}}" name="test_n">
-            <tr>
-            <td>{{$t->setname}}</td>
-            <td><button type="submit" class="btn btn-link">View</button></td>
+            <button type="submit" class="btn btn-link">View</button></form>
+            </td>
+            <td>
+            <form action="{{action('TestsController@delete')}}" method="GET">
+            <input type="hidden" value="{{$t->setid}}" name="test_id">
+            <input type="hidden" value="{{$t->setname}}" name="test_n">
+            <button type="submit" class="btn btn-link">Delete</button></form>
+            </td>
             </tr>
-            </form>
+            
         @endforeach
         </tbody>
         </table>
